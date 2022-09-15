@@ -12,15 +12,15 @@ client = pymongo.MongoClient(conn)
 database = client.MissionToMars
 column = database.MarsData
 
-@app.route("/")
+@app.route('/')
 def index():
 
     # Display the information from the Mongo DB
     mars_data = client.db.MissionToMars.find_one()
     # Renders the HTML page
-    return render_template("index.html", mars=mars_data)
+    return render_template('index.html', mars=mars_data)
 
-@app.route("/scrape")
+@app.route('/scrape')
 # Function calls on the scrape_mars python file and executes the whole thing, returns the values on the /scrape page
 def scrape():
 
