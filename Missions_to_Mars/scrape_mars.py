@@ -17,9 +17,9 @@ def scrape_all():
 
     # Build out the dictionary with all of the information
     mars_data = {
-        "News Title": news_title,
-        "News Paragraph": news_p,
-        "Featured Image URL": scrape_feature_image(browser),
+        "NewsTitle": news_title,
+        "NewsParagraph": news_p,
+        "FeaturedImageURL": scrape_feature_image(browser),
         "Facts": scrape_facts_mars(browser),
         "Hemispheres": scrape_hemispheres(browser)
     }

@@ -17,7 +17,8 @@ def index():
 
     # Display the information from the Mongo DB
     mars_data = client.db.MissionToMars.find_one()
-    return "If you see this, I think it worked"
+    # Renders the HTML page
+    return render_template("index.html", mars=mars_data)
 
 @app.route("/scrape")
 # Function calls on the scrape_mars python file and executes the whole thing, returns the values on the /scrape page
